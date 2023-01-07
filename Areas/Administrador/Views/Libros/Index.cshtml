@@ -1,0 +1,43 @@
+﻿@model LibreriaPW.Areas.Administrador.Models.IndexLibrosViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "LayoutAdmin";
+}
+
+<h1>Administrar libros</h1>
+
+<section class="listado">
+    <form method="post" action="~/administrador/libros/index">
+        <select onchange="this.form.submit()" asp-for="IdGenero" asp-items="@(new SelectList(Model.Generos,"Id","Nombre"))">
+            <option selected="selected" value="">Ver todos los libros</option>
+        </select>
+    </form>
+    <a class="agregLibro" href="~/Administrador/Libros/Agregar">
+        <h2>Agregar libro</h2>
+        <div class="iconosFeos">
+            <img src="~/imagenesPW/agregar.png" />
+        </div>
+    </a>
+
+    @if (Model.Libros != null)
+    {
+        @foreach (var item in Model.Libros)
+        {
+            <div class="card">
+                <h1>@item.Titulo</h1>
+                <h2>Autor: @item.Autor</h2>
+                <h2>Editorial: @item.Editorial</h2>
+                <h2>Precio: @item.Precio.Value.ToString("c")</h2>
+                <h2 title="@item.Descripcion">Descripción: @item.Descripcion</h2>
+                <div>
+                    <img class="image" src="~/imagenesPW/@(item.Id).jpg" />
+                </div>
+                <div>
+                    <a href="~/Administrador/Libros/Editar/@(item.Id)" class="iconosFeos"><img src="~/imagenesPW/editar.png" /></a>
+
+                    <a href="~/Administrador/Libros/Eliminar/@(item.Id)" class="iconosFeos"><img src="~/imagenesPW/borrar.png" /></a>
+                </div>
+            </div>
+        }
+    }
+</section>

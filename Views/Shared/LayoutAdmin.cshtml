@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Libreria Taibo - La mejor libreria de la Web</title>
+    <link href="~/Estilos.css" rel="stylesheet" />
+  </head>
+<body>
+    <header class="header"></header>
+    <nav class="navadmin">
+        <a href="~/Administrador">Principal</a>
+        <a href="~/Administrador/Generos">Administrar Generos</a>
+        <a href="~/Administrador/Libros">Administrar Libros</a>
+        <a href="~/Home/CerrarSesion">Cerrar Sesion</a>
+    </nav>
+    <main>
+        <p>Bienvenido @User.Identity?.Name (@User.Claims.FirstOrDefault(x=>x.Type=="Departamento")?.Value)</p>
+        @RenderBody()
+    </main>
+</body>
+</html>

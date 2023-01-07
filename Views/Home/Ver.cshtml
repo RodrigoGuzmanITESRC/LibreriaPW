@@ -1,0 +1,30 @@
+﻿@model LibreriaPW.Models.Libro
+@{
+    Layout = "Layout";
+}
+
+<div class="datoslibros">
+    <h1 id="nombre">@Model.Titulo</h1>
+
+    <img src="~/imagenesPW/@(Model.Id).jpg" id="imagen" />
+    <p>
+        <label>Precio:</label>
+        @if (Model.Precio != null)
+        {
+            <label id="precio">@(Model.Precio.Value.ToString("c"))</label>
+        }
+    </p>
+    <p>
+        <label>Genero:</label>
+        <label >@(Model.IdgeneroNavigation?.Nombre)</label>
+    </p>
+    <p>
+        <label>Descripción:</label>
+        <label id="descripcion">@(Model.Descripcion)</label>
+    </p>
+
+    <p style="text-align:center; margin:20px 0">
+        <a href="javascript:window.history.back()">Regresar</a>
+    </p>
+
+</div>

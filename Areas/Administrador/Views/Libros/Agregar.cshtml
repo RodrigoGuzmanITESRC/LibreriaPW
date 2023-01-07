@@ -1,0 +1,66 @@
+﻿@model LibrosViewModel
+@{
+    Layout = "LayoutAdmin";
+}
+
+<form method="post" action="~/administrador/libros/agregar" enctype="multipart/form-data">
+    <div>
+        <h1>Agregar Libro</h1>
+
+        <label>Titulo:</label>
+        <input type="text" id="txtNombre" required="required" asp-for="Libro.Titulo" />
+
+        <label>Autor:</label>
+        <input type="text" id="txtUnidadMedida" required="required" asp-for="Libro.Autor" />
+
+        <label>Genero:</label>
+        <select  required="required" asp-for="Libro.Idgenero"
+        asp-items="@(new SelectList(Model.Generos,"Id","Nombre"))">
+            <option selected="selected" value="">-- Seleccionar genero --</option>           
+        </select>
+
+        <label>Editorial:</label>
+        <input type="text" id="txtUnidadMedida" required="required" asp-for="Libro.Editorial" />
+
+        <label>Precio:</label>
+        <input type="number" id="txtPrecio" required="required" step="0.01" min="0.1" asp-for="Libro.Precio" />
+
+        <label>Numero de paginas:</label>
+        <input type="number" id="txtPrecio" required="required" step="0.01" min="0.1" asp-for="Libro.NumeroPaginas" />
+
+        <label class="desc">Descripción</label>
+        <textarea rows="2" cols="20" id="txtDescripcion" required="required" asp-for="Libro.Descripcion">
+</textarea>
+
+        <label>Imagen:</label>
+        <input type="file" id="fileUpload1" accept="image/jpg" asp-for="Imagen" />
+
+        <img id="imagePreview" src="~/imagenesPW/0.jpg" alt="Vista previa de la imagen" />
+        @Html.ValidationSummary()
+        <div class="botones">
+            <p id="error"></p>
+            <a href="~/administrador/index"><input type="submit" value="Agregar" id="btnAgregar" /></a>
+            <a href="~/administrador/libros"><input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" /></a>
+        </div>
+    </div>
+</form>
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#imagePreview').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $(document).ready(function () {
+        $("#fileUpload1").change(function () {
+            mostrarImagen(this);
+        });
+    });
+
+</script>
+

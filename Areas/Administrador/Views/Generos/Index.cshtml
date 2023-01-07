@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LibreriaPW.Models.Genero>
+@{
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Administrar Generos</h1>
+
+<section class="listado">
+
+    <a class="agregLibro" href="~/Administrador/Generos/Agregar">
+        <h1 >Añadir genero</h1>
+        <div class="iconosFeos">
+            <img src="~/imagenesPW/agregar.png" />
+        </div>
+    </a>
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <h1>@item.Nombre</h1>
+            <div>
+                <a href="~/Administrador/Generos/Editar/@(item.Id)" class="iconosFeos"><img src="~/imagenesPW/editar.png" /></a>
+                <a href="~/Administrador/Generos/Eliminar/@(item.Id)" class="iconosFeos"><img src="~/imagenesPW/borrar.png" /></a>
+            </div>
+        </div>
+    }
+</section>

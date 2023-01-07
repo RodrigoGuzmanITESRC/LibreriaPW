@@ -1,0 +1,50 @@
+﻿@using LibreriaPW.Services
+@inject MenuServices menu
+<html>
+<head>
+    <title>Libreria</title>
+    <link href="~/Estilos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a href="~/">
+                <img src="~/imagenesPW/logo.png"><img />
+            </a>
+        </div>
+        <ul>
+            <li>
+                @foreach (var item in menu.Get())
+                {
+                    <a href="~/c/@(item.Nombre)">@item.Nombre</a>
+                }
+            </li>
+            <li class="inicio">
+                <a href="~/Home/IniciarSesion">Iniciar Sesion</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Libreria Taibo</h3>
+            <p>¡Conocenos más!</p>
+            <ul class="socials">
+                <li><a href="https://es-la.facebook.com/LibreriasGandhi/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="tel:+528611241955"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                <li><a href="https://goo.gl/maps/xQ4KCDYiFCUnMam4A"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Rodrigo Alejandro Guzman Cruz - 181G0616</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,587 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+    width: 100%;
+    height: 75px;
+    background-color: #505d61;
+    line-height: 75px;
+    padding: 0px 100px;
+    position: fixed ;
+    z-index: 1;
+}
+
+    .nav .logo {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+    }
+
+        .nav .logo img {
+            height: 70px;
+            float: left;
+            color: #fff;
+            padding-top: 8px;
+            text-transform: uppercase;
+        }
+
+    .nav ul {
+        float: right;
+    }
+
+        .nav ul li {
+            display: inline-block;
+            list-style: none;
+        }
+
+            .nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+                text-transform: uppercase;
+                padding: 0px 32px;
+            }
+
+        .nav ul .inicio a {
+            color: #c0d96f;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 0px 32px;
+        }
+
+            .nav ul .inicio a:hover {
+                color: black;
+            }
+
+        .nav ul li a:hover {
+            color: #c0d96f;
+        }
+
+        .nav ul li .active {
+            color: #c0d96f;
+        }
+
+.image img {
+    width: 100%;
+    height: 0px auto;
+    opacity: 0.80;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.header {
+    height: 300px;
+   
+    background: url(imagenesPW/banner4.jpg) fixed;
+    margin: 0 20px 0 0;
+    
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.navadmin {
+    background-color: dimgrey;
+    min-height: 30px;
+    padding: 5px 0px;
+}
+
+
+    .navadmin a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        line-height: 30px;
+        margin: 0 10px;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+main {
+    display: block;
+    padding-top: 5%;
+}
+
+    main form img {
+        max-width: 80%;
+        max-height: 500px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    main h1 {
+        text-align: center;
+    }
+
+
+.librosClass a {
+    display: block;
+    width: calc(25% - 10px);
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: darkolivegreen;
+    margin: 0 10px 30px 0;
+}
+
+    .librosClass a div {
+        height: 140px;
+    }
+
+    .librosClass a img {
+        max-height: 140px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .librosClass a h3 {
+        color: black;
+        margin: 0;
+    }
+
+
+.datoslibros img {
+    display: block;
+    float: left;
+    width: 30%;
+}
+
+.datoslibros p {
+    display: block;
+    width: 60%;
+    float: right;
+    margin: 0 10px;
+}
+
+    .datoslibros p label {
+        display: inline-block;
+        width: 25%;
+        font-weight: bold;
+    }
+
+
+        .datoslibros p label:nth-child(2n) {
+            display: inline-block;
+            width: 70%;
+            font-weight: normal;
+        }
+
+.admin {
+    color: white;
+}
+
+
+.listado a, .listado .card {
+    
+    
+    width: 300px;
+    display: block;
+    margin: 15px;
+    float: left;
+    
+    position: center;
+    
+}
+
+
+
+.listado h1, .listado h2 {
+    margin: 10px;
+    text-align: center;
+    text-shadow: 1px;
+    height: 55px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 25px;
+    overflow: hidden;
+    color: white;
+    background-color:dimgray;
+  
+}
+
+.listado .mark h1 {
+    color: black;
+
+  
+}
+
+
+.listado h1 {
+    
+    color: white;
+    font-size: 25px;
+    height: 55px;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    overflow:hidden;
+}
+
+.listado h2 {
+    background: none;
+    color: black;
+    font-size: 15px;
+    height: 25px;
+    line-height: 15px;
+    text-align: left;
+}
+
+    .listado h2[title] {
+        height: 100px;
+    }
+
+.listado .image {
+    align-content:stretch;
+    width: 284px;
+    height: 300px;
+    margin: 10px;
+    padding: 3px;
+}
+
+.listado img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.listado .botones {
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+    .listado .botones input, .listado .botones a {
+        display: block;
+        float: left;
+        width: 21px;
+        height: 21px;
+        margin: 2px;
+        border: 0;
+        background-size: contain;
+    }
+
+.btnEditar {
+    background-image: url(images/editb.png);
+}
+
+.btnBorrar {
+    background-image: url(images/deleteb.png);
+}
+
+/*.1*/
+.modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+form > div {
+    width: 500px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid gray;
+    overflow: hidden;
+}
+
+.modal form > div {
+    width: 500px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid gray;
+    outline: 10px solid rgba(85, 171, 0, 0.30);
+    overflow: hidden;
+}
+
+
+form input[type=submit], input[type=button] {
+    display: block;
+    float: left;
+    width: 48%;
+    height: 30px;
+    margin: 0 1%;
+    background-color: dimgray;
+    color: white;
+    
+}
+
+form h1 {
+    margin: 0 0 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    font-size:30px;
+}
+
+form div > label {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    box-sizing: border-box;
+    width: 29%;
+    margin: 0 1% 5px 0; 
+    font-size: 15pt;
+}
+
+form div > input, form div > select, form div > textarea {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 5px 0;
+}
+
+form div > textarea {
+    width: 100%;
+    resize: none;
+    height: 50px;
+}
+
+form > div > img {
+    clear: both;
+    max-height: 100px;
+    display: block;
+    margin: auto;
+}
+
+form .desc{
+    margin-top:20px;
+}
+
+#error, .error {
+    text-align: center;
+    color: red;
+    font-size: smaller;
+    margin: 5px 0;
+}
+
+/*index inicio*/
+
+
+img {
+    max-width: 100%;
+    height: 400px;
+}
+
+.card .image {
+    max-width: 100%;
+    height: 300px;
+}
+
+
+
+.wrapper {
+    padding-inline-start: 20px;
+    padding-inline-end: 0px;
+    height: auto;
+    position: absolute;
+}
+
+
+.grid {
+    background: whitesmoke;
+    padding: 10px;
+    margin: 20px 0;
+    position: page sticky;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.col {
+    float: left;
+    padding: 10px;
+}
+
+
+/* Nested test */
+
+.col-1 {
+    width: auto;
+    
+}
+
+.col-2-3 {
+    width: 66.66%;
+   
+}
+
+.col-1-3 {
+    width: 33.33%;
+   
+}
+
+.col-1-4 {
+    width: 25%;
+  
+}
+
+
+.module {
+    padding: 10px;
+    background: #fff;
+}
+.wrapper div .titulo {
+    text-align:center;
+    font-size:40px;
+}
+.wrapper div .libros {
+    text-align: left;
+    font-size: 30px;
+    
+}
+
+@media screen and (max-width: 650px) {
+
+   
+    .wrapper {
+        width: 100%;
+        background: #1b8334;
+    }
+
+    .module {
+        padding: 10px;
+        margin: 5px 0;
+        background: #fff;
+        
+    }
+
+    .col {
+        float: left;
+        background: yellow;
+    }
+
+    .col-2-3, .col-1-3, .col-1-4 {
+        width: 100%;
+    }
+  
+}
+
+
+
+
+
+/* index final*/
+
+footer {
+    position: page fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    margin-top: 70%;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .footer-content h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+
+    .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+    }
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+    .socials li {
+        margin: 0 10px;
+    }
+
+    .socials a {
+        text-decoration: none;
+        color: #c0d96f;
+    }
+
+        .socials a i {
+            font-size: 1.1rem;
+            transition: color .4s ease;
+        }
+
+        .socials a:hover i {
+            color: #c0d96f;
+        }
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    .footer-bottom p {
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .footer-bottom span {
+        text-transform: uppercase;
+        opacity: .4;
+        font-weight: 200;
+    }
+
+    .iconosFeos{
+        height: 30px;
+    }
+
+    .agregLibro{
+        padding-top:10px;
+        height:60px;
+        text-decoration:none;
+       
+    }
+        .agregLibro h2 {
+            padding:5px;
+            text-align: center;
+            font-size: 20px;
+            background-color:dimgray;
+            color:white;
+        }
+    
+   
+

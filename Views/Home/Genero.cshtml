@@ -1,0 +1,30 @@
+﻿@model LibreriaPW.Models.ViewModels.GeneroViewModel
+@{
+    Layout = "Layout";
+}
+
+<h1>@Model.NombreGenero</h1>
+
+
+<div class="librosClass">
+    @if (Model.Libros != null)
+    {
+        @foreach (var item in Model.Libros)
+        {
+            @if (item.Titulo != null)
+            {
+                <a href="~/p/@(item.Titulo.Replace(" ","-"))">
+                    <div>
+                        <img src="~/imagenesPW/@(item.Id).jpg" />
+                    </div>
+                    <h2>@item.Titulo</h2>
+                    @if (item.Precio != null)
+                    {
+                        <h3>@item.Precio.Value.ToString("c")</h3>
+                    }
+                </a>
+            }
+        }
+    }
+</div>
+
